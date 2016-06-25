@@ -1,0 +1,7 @@
+    <a href="{% url 'blog:detail' pk=post.pk %}"><h1>{{ post.title }}</h1></a>
+
+    <p>{{ post.content }}</p>
+
+    {% if post.image %}
+        <img src="{{ post.image.url }}"/>
+    {% endif %}

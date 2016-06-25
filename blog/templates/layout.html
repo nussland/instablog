@@ -1,0 +1,25 @@
+{% load bootstrap3 %}
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block page_title %}{% endblock %}</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <script src="{% static 'hello.js'%}"></script>
+</head>
+<body class="container">
+
+    <p>{{ request.just_say }}</p>
+
+{% block body %}{% endblock %}
+
+</body>
+</html>

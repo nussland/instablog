@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block page_title %}{{ post.title }} - 게시물 보기{% endblock %}
+
+{% block body %}
+
+    {% include 'detail_part.html' %}
+
+    <p><a href="{% url 'blog:list' %}">목록가기</a></p>
+
+{% endblock %}

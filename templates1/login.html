@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Instablog</title>
+</head>
+<body>
+
+<form method="post" action="{% url 'login_url' %}">
+    {% csrf_token %}
+
+    <p>username: {{ form.username }}</p>
+    <p>password: {{ form.password }}</p>
+
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+
+</form>
+
+</body>
+</html>
